@@ -1,54 +1,53 @@
-// 1: PRIMITIVE DATA TYPES
+//TYPE CONVERSION
 
-// STRING
-const name = "John Doe";
-console.log(typeof name);
-//prints string
+//declare a variable
+let val;
 
-//NUMBER
-const age = 24;
-console.log(typeof age);
-//prints number
+//TO CONVERT TO STRING 1
+val = String(599);
+val = String(4+4);
 
-//BOOLEAN
-const hasKids = true;
-console.log(typeof hasKids);
-//prints boolean
+//Boolean to string
 
-//NULL
-const car = null
-console.log(typeof car);
-// prints object [IN REALITY It IS A NULL]
+val = String(true);
 
-//UNDEFINED
-let test;
-console.log(typeof test);
-//prints undefined
+//Date to a string
+val = String(new Date())
 
-//SYMBOL
-const sym = Symbol();
-console.log(typeof sym);
-//prints symbol
+//Array to string
+val = String([1,2,3,4,5])
+
+//TO CONVERT TO STRING 2
+
+val = (5).toString()
+val = (true).toString();
 
 
-// 2: REFERENCE TYPES
+//STRING TO NUMBER
+val = Number("5");
+console.log(val.toFixed())
 
-//ARRAYS
-const cars = ["mercedez", "toyota", "GM", "Nissan"];
-console.log(typeof cars)
-//prints object
+//BOOLEAN TO NUMBER
+val = Number(true) 
+val = Number(false) 
+val = Number(null) 
+val = Number("hello") //NaN
+val = parseInt("100")  //100
+val = parseFloat("100.90"); //100.9
 
-//OBJECT LITERAL
 
-const address = {
-   country : "Nigeria",
-   city : "Lagos"
-}
-console.log(typeof address)
-//prints object
 
-//DATE
-const today = new Date()
-console.log(typeof today);
-console.log(today);
+
+//output
+console.log(val); //599
+console.log(typeof val);//string
+console.log(val.length) //3
+
+//TYPE COERHESION
+
+let val1 = String(9);
+let val2 = 1;
+let sum = (val1 + val2);
+console.log(typeof sum);
+console.log(sum);
 
