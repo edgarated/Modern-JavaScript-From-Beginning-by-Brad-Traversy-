@@ -1,29 +1,22 @@
-//OBJECT LITERALS
-const person = {
-firstName : "Chukwu",
-lastName : "Ebuka",
-age : 36,
-email : "lorem@outlook.com",
-hobbies : ["singing", "dancing"],
-address: {
-  city : "Ikeja",
-  state : "Lagos"
-},
-getBirthdayYear : function(){
-  return 2019 - this.age;
-}
-}
-
+//DATE AND TIME
 let val;
+const today = new Date();
+let birthday = new Date(" 9-10-1981 11:24:00")
+birthday = new Date(" september 10 1982")
 
-val = person;
-//get dpecific value
-val = person.firstName
-val = person["lastName"] 
-val =person.age
-val = person.hobbies[0]
-val = person.address.city
-val = person.address["city"]
-val = person.getBirthdayYear();
+val = today.getMonth()
+val = today.getDate()
+val = today.getDay()
+val = today.getFullYear()
+val = today.getHours()
+val = today.getMinutes()
+val = today.getSeconds()
 
-console.log(val)
+
+birthday.setDate(12)
+birthday.setMonth(2)
+birthday.setFullYear(1984)
+birthday.setMinutes(30);
+
+
+console.log(val);
