@@ -1,38 +1,54 @@
-//VARIABLES - VAR, LET, CONST
+// 1: PRIMITIVE DATA TYPES
 
-//DECLARE A VARIABLE [VAR]
-var name = "John Doe";
-console.log(name)
-//prints John Doe
+// STRING
+const name = "John Doe";
+console.log(typeof name);
+//prints string
 
-//REASSIGN VARIABLE
-name = " Jane Doe";
-console.log(name)
-//prints  Jane Doe
+//NUMBER
+const age = 24;
+console.log(typeof age);
+//prints number
 
-//INIT VAR
-var greeting;
-greeting = "hello";
-console.log(greeting);
-//prints hello
+//BOOLEAN
+const hasKids = true;
+console.log(typeof hasKids);
+//prints boolean
 
-//DECLARE A VARIABLE [LET]
-let name1 = "Ebuka Obi";
-console.log(name1)
-//prints Ebuka Obi
+//NULL
+const car = null
+console.log(typeof car);
+// prints object [IN REALITY It IS A NULL]
+
+//UNDEFINED
+let test;
+console.log(typeof test);
+//prints undefined
+
+//SYMBOL
+const sym = Symbol();
+console.log(typeof sym);
+//prints symbol
 
 
-//DECLARE A VARIABLE 
-const name2 = "John Doe";
-console.log(name2)
-//prints John Doe
+// 2: REFERENCE TYPES
 
-//const cannot be reassigned
-name2 = "chukwu";
-console.log(name2)
-//prints ERROR
+//ARRAYS
+const cars = ["mercedez", "toyota", "GM", "Nissan"];
+console.log(typeof cars)
+//prints object
 
-//const must have a value;
-const hobby;
-console.log(hobby)
-//prints ERROR
+//OBJECT LITERAL
+
+const address = {
+   country : "Nigeria",
+   city : "Lagos"
+}
+console.log(typeof address)
+//prints object
+
+//DATE
+const today = new Date()
+console.log(typeof today);
+console.log(today);
+
