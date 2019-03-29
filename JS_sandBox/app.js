@@ -1,65 +1,46 @@
-//SWITCH STATEMENT
+//FUNCTION DECLARATION
 
-const color = "pink";
-switch(color){
-
-case "purple":
-console.log("color is purple");
-break
-
-case "blue":
-console.log("color is blue");
-break
-
-case "pink":
-console.log("color is pink");
-break
-
-case "yellow":
-console.log("color is yellow");
-break
-
-case "black":
-console.log("color is black");
-break
-default:
-console.log("not a color")
-}
-
-
-//To GET THE DAY OF THE WEEK USING SWITCH METHOD
-
-let day;
-switch(new Date().getDay()){
-
-  case 0:
-  day = "sunday";
-  break;
-
-  case 1:
-  day = "monday";
-  break;
-
-  case 2:
-  day = "tuesday";
-  break;
-
-  case 3:
-  day = "wednesday";
-  break;
-
-  case 4:
-  day = "thursday";
-  break;
-
-  case 5:
-  day = "friday";
-  break;
-
-  case 6:
-  day = "saturday";
-  break;
+function greeting (firstName = "John", lastName = "Doe"){
+return "Hello " + firstName + ' ' + lastName;
 
 }
+console.log(greeting("Ebuka", "Aneke"))
 
-console.log(`Today is ${day}`)
+//FUNCTION EXPRESSIONS
+
+const name = function(firstName, lasttName){
+
+  return `his full name is ${firstName} ${lasttName}`
+}
+console.log(name("John", "Okoro"))
+
+//IMMEDIATELY INVOKABLE FUNCTION EXPRESSIONS [IIFEs]
+// (function(){
+//   console.log("IIFE ran...");
+// })();
+
+// (function(name){
+//   console.log("hello " + name);
+// })("ebuka");
+
+
+//PROPERTY METHODS
+
+const todo = {
+  add(){
+    console.log(`Add to do..`)
+  },
+  edit(input){
+    console.log(`Edit ${input}`)
+  },
+
+  delete(){
+    console.log(`Delete...`)
+  }
+}
+
+todo.add()
+todo.edit(9)
+todo.delete()
+
+
