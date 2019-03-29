@@ -1,93 +1,88 @@
-//FOR LOOP
+//DOM SELECTORS
 
-// for (let index = 0; index < 10; index++) {
-//  if(index === 2){
-//    console.log("super number");
-//    continue;
-//  }
 
-//  if(index === 6){
-//    console.log("stop the loop")
-//    break;
-//  }
-//  console.log("Number " + index)
-// }
+//getElementById
+// console.log(document.getElementById("task-title"))
 
-//WHILE LOOP
+// //Get things from the element
+// console.log(document.getElementById("task-title").id)
+// console.log(document.getElementById("task-title").className)
 
-// let i = 0
-// while (i < 10) {
+// const taskTitle = document.getElementById("task-title");
+
+// //change styling
+// taskTitle.style.background = "#333";
+// taskTitle.style.color = "white";
+// taskTitle.style.padding = "5px";
+
+// //change the content
+// taskTitle.textContent = "Task List"
+// taskTitle.innerText = "My Tasks"
+// taskTitle.innerHTML = '<span style= "color:red">Task List</span>'
+
+
+//document.querySelector
+// console.log(document.querySelector("#task-title"))
+// console.log(document.querySelector(".card-title"))
+// console.log(document.querySelector("h5"))
+
+// document.querySelector("ul li").style.color = "pink"
+// document.querySelector("li:nth-child(4)").style.color = "pink"
+// document.querySelector("li:nth-child(odd)").style.background = " "
+// document.querySelector("li:nth-child(odd)").innerText = "hi"
+
+
+//document.getElementByClassName
+// const list = document.getElementsByClassName("collection-item")
+// console.log(list)
+// console.log(list[0])
+// list[2].style.color = "red";
+// list[3].textContent = "hello"
+
+
+//document.getElementByTagName
+
+// let lis = document.getElementsByTagName("li")
+// console.log(lis)
+
+// lis[2].style.color = "red";
+// lis[3].textContent = "hello"
+
+// //convert HTML collection into array
+
+// lis = Array.from(lis)
+
+// lis.forEach(function(li){
+// console.log(li.className)
+// li.textContent = "hello"
+
+// })
+// console.log(lis)
+
+//document.querySelectorAll
+const items = document.querySelectorAll("ul.collection li.collection-item")
+
+items.forEach(function(item, index){
+
+  item.textContent = `${index}: hello`
+
+})
+
+
+
+const liOdd = document.querySelectorAll("li:nth-child(odd)")
+const liEven = document.querySelectorAll("li:nth-child(even)")
+
+liOdd.forEach(function(li, index){
+li.style.background = "#ccc"
+
+})
+
+
+liEven.forEach(function(li, index){
+  li.style.background = "#fefe"
   
-//   console.log( `Number : ${i}`)
-//   i++;
-// }
-
-//DO WHILE LOOP
-// let i = 0
-// do {
-//   console.log(i);
-//   i++
-// } while (i < 10);
-
-//LOOPING THROUGH ARRAYS
-
-const cars = ["toyota", "nissan", "chevy", "cherokee", "volks"]
-
-//FOR LOOP
-// for (let index = 0; index < cars.length; index++) {
-//   const element = cars[index];
-//   console.log(element)
+  })
   
-// }
 
-// FOR EACH
-// cars.forEach(car => {
-//   console.log(car)
-// });
-
-//REVERSING AN ARRAY
-for (let index = cars.length; index >= 0 ; index--) {
-  const element = cars[index];
-  console.log(element)
-  
-}
-
-//MAP
-const users = [
-{id : 1, name : "tunji"},
-{id : 2, name : "rashidi"},
-{id : 3, name : "zizu"},
-
-];
-const ids = users.map(function(user){
-
-  return user.id
-});
-// console.log(ids);
-
-//FOR IN LOOP
-
-const user = {
-  name : "atiku",
-  location : "lagos",
-  age : 23,
-  hobby : "singing"
-
-}
-
-for (const x in user) {
-  console.log(`${x} : ${user[x]} `)
-}
-
-//Example 2
-const admin = {
-  name : "atiku",
-  location : "lagos",
-  age : 23,
-  hobby : "singing",
-  quote : "live and let live"
-}
-
-for (const x in admin) {
-  console.log(`${x} : ${admin[x]}`)
-}
+console.log(items)
