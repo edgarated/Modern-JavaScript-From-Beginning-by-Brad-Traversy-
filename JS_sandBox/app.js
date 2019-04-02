@@ -1,44 +1,114 @@
-//Replacing-Elements in the DOM
+//10_ Keyboard-Input-Events
 
-const newHead = document.createElement("h5");
-newHead.id = "task-title";
-const item = document.createTextNode("Breaking");
-newHead.appendChild(item);
+const form = document.querySelector("form");
+const taskInput = document.querySelector("#task");
+const heading = document.querySelector("h5")
+const sele = document.querySelector("select");
 
-//old heading
+//clear input
+taskInput.value = '';
 
-const oldHead = document.querySelector("#task-title");
-
-//parent
-const cardAct = document.querySelector(".card-action");
-
-cardAct.replaceChild(newHead, oldHead);
-
+// form.addEventListener("submit", runEvent);
+// function runEvent(e){
+// // e.preventDefault()
+// //   console.log(`EVENT TYPE : ${e.type}`)
 
 
-// TO REMOVE ELEMENT FROM THE DOM
-const lis = document.querySelectorAll("li")
-const list = document.querySelector("ul")
-lis[4].remove();
 
- 
+//   //get input
+//   // console.log(taskInput.value)
+  
+// }
+//keydown event
+// taskInput.addEventListener("keydown", runEvent);
 
-//CLASSES AND ATTRIBUTE
-const firstli = document.querySelector("li:first-child");
-const link = firstli.children[0];
+// function runEvent(e){
+// console.log(`EVENT TYPE : ${e.type}`)
+// console.log(e.target.value)
+// // heading.textContent = e.target.value;
 
-//CLASSES 
-let val;
-val = link.className
-val = link.classList
-val = link.classList[0]
-link.classList.add("pretest");
-link.classList.remove("pretest");
-val = link
+// }
 
-//ATTRIBUTES
-val = link.getAttribute("href")
-val = link.setAttribute("href", "http://google.com")
-val = link.hasAttribute("title");
+//keyup  event
+// taskInput.addEventListener("keyup", runEvent);
 
-console.log(val)
+// function runEvent(e){
+// console.log(`EVENT TYPE : ${e.type}`)
+// console.log(e.target.value)
+// // heading.textContent = e.target.value;
+
+// }
+
+//keypress
+// taskInput.addEventListener("keypress", runEvent);
+
+// function runEvent(e){
+// console.log(`EVENT TYPE : ${e.type}`)
+// console.log(e.target.value)
+// // heading.textContent = e.target.value;
+
+// }
+
+//keypress
+// taskInput.addEventListener("keypress", runEvent);
+
+// function runEvent(e){
+// console.log(`EVENT TYPE : ${e.type}`)
+// console.log(e.target.value)
+// // heading.textContent = e.target.value;
+
+// }
+
+//focus event/ blur event
+
+// taskInput.addEventListener("focus", runEvent);
+// // taskInput.addEventListener("blur", runEvent);
+
+// function runEvent(e){
+//   console.log(`EVENT TYPE : ${e.type}`)
+//   // console.log(e.target.value)
+//   // heading.textContent = e.target.value;
+  
+//   }
+
+
+//cut event
+//   taskInput.addEventListener("cut", runEvent);
+
+// function runEvent(e){
+//   console.log(`EVENT TYPE : ${e.type}`)
+//   // console.log(e.target.value)
+//   // heading.textContent = e.target.value;
+  
+//   }
+
+//paste event
+//   taskInput.addEventListener("paste", runEvent);
+
+// function runEvent(e){
+//   console.log(`EVENT TYPE : ${e.type}`)
+//   // console.log(e.target.value)
+//   // heading.textContent = e.target.value;
+  
+//   }
+
+
+//paste event
+//   taskInput.addEventListener("input", runEvent);
+
+// function runEvent(e){
+//   console.log(`EVENT TYPE : ${e.type}`)
+//   // console.log(e.target.value)
+//   // heading.textContent = e.target.value;
+  
+//   }
+
+//change event
+  sele.addEventListener("change", runEvent);
+
+function runEvent(e){
+  console.log(`EVENT TYPE : ${e.type}`)
+  console.log(e.target.value)
+  // heading.textContent = e.target.value;
+  
+  }
