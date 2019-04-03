@@ -1,34 +1,35 @@
-//EVENT BUBBLING
+//local storage
 
-// const spark = document.querySelector(".card-title");
-// spark.addEventListener("click", function(){
-//   console.log("card title");
-// })
-// const sp = document.querySelector(".card-content");
-// sp.addEventListener("click", function(){
-//   console.log("card-content");
-// })
-// const spa = document.querySelector(".col");
-// spa.addEventListener("click", function(){
-//   console.log("col");
-// })
-// const spar = document.querySelector(".container");
-// spar.addEventListener("click", function(){
-//   console.log("container");
-// })
+// let profile = {
 
-//EVENT DELEGATION
+//   name : "kingsley okobo",
+//   school: "fedi",
+//   sex: "male",
+//   age :15
+// }
 
-// const deleteItem = document.querySelector(".delete-item");
-// deleteItem.addEventListener("click", dele);
+// const myPro = JSON.stringify(profile);
+// console.log(typeof myPro);
 
-document.body.addEventListener("click", dele)
+// localStorage.setItem("profile", myPro);
 
-function dele(e){
-if(e.target.parentElement.classList.contains("delete-item")){
-  e.target.parentElement.parentElement.remove();
+// const toJSON = JSON.parse(myPro);
+// console.log(toJSON.school);
+
+
+const addy = document.querySelector("form");
+addy.addEventListener("submit",
+function(e){
+const task = document.getElementById("task").value;
+let tasks;
+if (localStorage.getItem("tasks")=== null){
+tasks = [];
+}else{
+  tasks = JSON.parse(localStorage.getItem("tasks"));
 }
+tasks.push(task);
+localStorage.setItem("tasks", JSON.stringify(tasks))
+alert("Task Saved")
+e.preventDefault();
 
-}
-
-
+});
