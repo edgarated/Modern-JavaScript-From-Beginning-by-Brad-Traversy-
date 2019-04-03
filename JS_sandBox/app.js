@@ -1,114 +1,34 @@
-//10_ Keyboard-Input-Events
+//EVENT BUBBLING
 
-const form = document.querySelector("form");
-const taskInput = document.querySelector("#task");
-const heading = document.querySelector("h5")
-const sele = document.querySelector("select");
+// const spark = document.querySelector(".card-title");
+// spark.addEventListener("click", function(){
+//   console.log("card title");
+// })
+// const sp = document.querySelector(".card-content");
+// sp.addEventListener("click", function(){
+//   console.log("card-content");
+// })
+// const spa = document.querySelector(".col");
+// spa.addEventListener("click", function(){
+//   console.log("col");
+// })
+// const spar = document.querySelector(".container");
+// spar.addEventListener("click", function(){
+//   console.log("container");
+// })
 
-//clear input
-taskInput.value = '';
+//EVENT DELEGATION
 
-// form.addEventListener("submit", runEvent);
-// function runEvent(e){
-// // e.preventDefault()
-// //   console.log(`EVENT TYPE : ${e.type}`)
+// const deleteItem = document.querySelector(".delete-item");
+// deleteItem.addEventListener("click", dele);
 
+document.body.addEventListener("click", dele)
 
+function dele(e){
+if(e.target.parentElement.classList.contains("delete-item")){
+  e.target.parentElement.parentElement.remove();
+}
 
-//   //get input
-//   // console.log(taskInput.value)
-  
-// }
-//keydown event
-// taskInput.addEventListener("keydown", runEvent);
-
-// function runEvent(e){
-// console.log(`EVENT TYPE : ${e.type}`)
-// console.log(e.target.value)
-// // heading.textContent = e.target.value;
-
-// }
-
-//keyup  event
-// taskInput.addEventListener("keyup", runEvent);
-
-// function runEvent(e){
-// console.log(`EVENT TYPE : ${e.type}`)
-// console.log(e.target.value)
-// // heading.textContent = e.target.value;
-
-// }
-
-//keypress
-// taskInput.addEventListener("keypress", runEvent);
-
-// function runEvent(e){
-// console.log(`EVENT TYPE : ${e.type}`)
-// console.log(e.target.value)
-// // heading.textContent = e.target.value;
-
-// }
-
-//keypress
-// taskInput.addEventListener("keypress", runEvent);
-
-// function runEvent(e){
-// console.log(`EVENT TYPE : ${e.type}`)
-// console.log(e.target.value)
-// // heading.textContent = e.target.value;
-
-// }
-
-//focus event/ blur event
-
-// taskInput.addEventListener("focus", runEvent);
-// // taskInput.addEventListener("blur", runEvent);
-
-// function runEvent(e){
-//   console.log(`EVENT TYPE : ${e.type}`)
-//   // console.log(e.target.value)
-//   // heading.textContent = e.target.value;
-  
-//   }
+}
 
 
-//cut event
-//   taskInput.addEventListener("cut", runEvent);
-
-// function runEvent(e){
-//   console.log(`EVENT TYPE : ${e.type}`)
-//   // console.log(e.target.value)
-//   // heading.textContent = e.target.value;
-  
-//   }
-
-//paste event
-//   taskInput.addEventListener("paste", runEvent);
-
-// function runEvent(e){
-//   console.log(`EVENT TYPE : ${e.type}`)
-//   // console.log(e.target.value)
-//   // heading.textContent = e.target.value;
-  
-//   }
-
-
-//paste event
-//   taskInput.addEventListener("input", runEvent);
-
-// function runEvent(e){
-//   console.log(`EVENT TYPE : ${e.type}`)
-//   // console.log(e.target.value)
-//   // heading.textContent = e.target.value;
-  
-//   }
-
-//change event
-  sele.addEventListener("change", runEvent);
-
-function runEvent(e){
-  console.log(`EVENT TYPE : ${e.type}`)
-  console.log(e.target.value)
-  // heading.textContent = e.target.value;
-  
-  }
